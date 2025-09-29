@@ -19,8 +19,7 @@
     dest: "{{ fail2ban_jail_local }}"
     mode: 0644
   notify:
-    - fail2ban restart
+    - Restart fail2ban
   tags:
     - fail2ban
     - config
-...
