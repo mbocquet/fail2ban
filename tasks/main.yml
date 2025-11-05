@@ -2,7 +2,7 @@
 # tasks file for fail2ban
 - name: Package
   ansible.builtin.package:
-    name: '{{ fail2ban_packages }}'
+    name: "{{ fail2ban_packages }}"
   tags:
     - fail2ban
     - package
@@ -15,7 +15,7 @@
 
 - name: "{{ fail2ban_jail_local }}"
   ansible.builtin.template:
-    src: 'jail.local.j2'
+    src: jail.local.j2
     dest: "{{ fail2ban_jail_local }}"
     mode: "0644"
   notify:
